@@ -1,0 +1,3 @@
+class Answer(object):
+'''432. All O`one Data Structure'''
+    # create a min heap and max heap. For inc, if the key exists, search, increment and modify its position accordingly in both heaps, otherwise insert it to both heaps. For dec, if the key exists, search, decrement and modify its position accordingly in both heaps. getMaxKey, and getMinKey is simply a call to the heap function to get the maximum and minimum.
