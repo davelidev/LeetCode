@@ -1,5 +1,4 @@
-class Answer(object):
-'''817. Linked List Components'''
+class Answer(object):'''817. Linked List Components'''
     def numComponents(head, G):
         G = set(G)
         cur = head

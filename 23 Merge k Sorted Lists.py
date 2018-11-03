@@ -1,5 +1,4 @@
-class Answer(object):
-'''23. Merge k Sorted Lists'''
+class Answer(object):'''23. Merge k Sorted Lists'''
     def mergeKLists(lists):
         import heapq
         heap = [(lst.val, lst) for lst in lists if lst]

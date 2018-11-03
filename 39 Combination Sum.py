@@ -1,5 +1,4 @@
-class Answer(object):
-'''39. Combination Sum'''
+class Answer(object):'''39. Combination Sum'''
     def combinationSum(candidates, target):
         dp = [[0, []]]
         for num in candidates:

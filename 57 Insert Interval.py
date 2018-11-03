@@ -1,5 +1,4 @@
-class Answer(object):
-'''57. Insert Interval'''
+class Answer(object):'''57. Insert Interval'''
         def insert(intervals, newInterval):
         left, right = [], []
         s, e = newInterval.start, newInterval.end

@@ -1,5 +1,4 @@
-class Answer(object):
-'''19. Remove Nth Node From End of List'''
+class Answer(object):'''19. Remove Nth Node From End of List'''
     def removeNthFromEnd(head, n):
         nth = head
         for _ in range(n): nth = nth.next

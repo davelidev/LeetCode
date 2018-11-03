@@ -1,5 +1,4 @@
-class Answer(object):
-'''791. Custom Sort String'''
+class Answer(object):'''791. Custom Sort String'''
     def customSortString(S, T):
         from collections import Counter
         counts = Counter(T)

@@ -1,5 +1,4 @@
-class Answer(object):
-'''47. Permutations II'''
+class Answer(object):'''47. Permutations II'''
     def permuteUnique(nums):
         from collections import Counter
         counts = Counter(nums)

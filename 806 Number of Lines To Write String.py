@@ -1,5 +1,4 @@
-class Answer(object):
-'''806. Number of Lines To Write String'''
+class Answer(object):'''806. Number of Lines To Write String'''
     def numberOfLines(widths, S):
         num_lines = line_width = 0
         for i, char in enumerate(S):

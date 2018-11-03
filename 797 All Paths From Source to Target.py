@@ -1,5 +1,4 @@
-class Answer(object):
-'''797. All Paths From Source to Target'''
+class Answer(object):'''797. All Paths From Source to Target'''
     def allPathsSourceTarget(self, graph):
         paths, cur_path = [], []
         def dfs(cur):

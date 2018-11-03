@@ -1,5 +1,4 @@
-class Answer(object):
-'''49. Group Anagrams'''
+class Answer(object):'''49. Group Anagrams'''
     def groupAnagrams(strs):
         group = {}
         for word in strs:

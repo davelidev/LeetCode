@@ -1,5 +1,4 @@
-class Answer(object):
-'''45. Jump Game II'''
+class Answer(object):'''45. Jump Game II'''
     def jump(nums):
         if len(nums) == 1:
             return 0

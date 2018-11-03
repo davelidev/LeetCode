@@ -1,5 +1,4 @@
-class Answer(object):
-'''11. Container With Most Water'''
+class Answer(object):'''11. Container With Most Water'''
     def maxArea(height):
         i, j = 0, len(height) - 1
         water = 0

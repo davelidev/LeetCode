@@ -1,5 +1,4 @@
-class Answer(object):
-'''40. Combination Sum II'''
+class Answer(object):'''40. Combination Sum II'''
     def combinationSum2(candidates, target):
         from collections import Counter
         counts = Counter(candidates)

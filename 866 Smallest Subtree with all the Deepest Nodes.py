@@ -1,5 +1,4 @@
-class Answer(object):
-'''866. Smallest Subtree with all the Deepest Nodes'''
+class Answer(object):'''866. Smallest Subtree with all the Deepest Nodes'''
     def subtreeWithAllDeepest(root):
         bfs = {root}
         while bfs:

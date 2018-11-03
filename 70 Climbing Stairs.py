@@ -1,5 +1,4 @@
-class Answer(object):
-'''70. Climbing Stairs'''
+class Answer(object):'''70. Climbing Stairs'''
     def climbStairs(n):
         if n <= 2: return n
         prev_prev, prev = 1, 2

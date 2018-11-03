@@ -1,5 +1,4 @@
-class Answer(object):
-'''821. Shortest Distance to a Character'''
+class Answer(object):'''821. Shortest Distance to a Character'''
     def shortestToChar(S, C):
         res = []
         last_C = float('-inf')

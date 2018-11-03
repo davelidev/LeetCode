@@ -1,5 +1,4 @@
-class Answer(object):
-'''54. Spiral Matrix'''
+class Answer(object):'''54. Spiral Matrix'''
     def spiralOrder(matrix):
         if not matrix:
             return []

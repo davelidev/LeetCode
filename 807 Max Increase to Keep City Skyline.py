@@ -1,5 +1,4 @@
-class Answer(object):
-'''807. Max Increase to Keep City Skyline'''
+class Answer(object):'''807. Max Increase to Keep City Skyline'''
 
     def maxIncreaseKeepingSkyline(self, grid):
         m, n = len(grid), len(grid[0])

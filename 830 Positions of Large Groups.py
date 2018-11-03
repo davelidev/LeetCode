@@ -1,5 +1,4 @@
-class Answer(object):
-'''830. Positions of Large Groups'''
+class Answer(object):'''830. Positions of Large Groups'''
     def largeGroupPositions(S):
         stack = []
         prev = None

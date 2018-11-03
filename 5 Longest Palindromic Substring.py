@@ -1,5 +1,4 @@
-class Answer(object):
-'''5. Longest Palindromic Substring'''
+class Answer(object):'''5. Longest Palindromic Substring'''
     def longestPalindrome(s):
         def get_pal(i, j):
             while 0 < i and j  < len(s) - 1 and s[i - 1] == s[j + 1]:

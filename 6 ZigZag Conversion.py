@@ -1,5 +1,4 @@
-class Answer(object):
-'''6. ZigZag Conversion'''
+class Answer(object):'''6. ZigZag Conversion'''
     def convert(s, numRows):
         res = [[] for _ in range(numRows)]
         cur, direction = 0, 1

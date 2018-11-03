@@ -1,5 +1,4 @@
-class Answer(object):
-'''41. First Missing Positive'''
+class Answer(object):'''41. First Missing Positive'''
     def firstMissingPositive(nums):
         # index visited is marked as negative
         # pass1: make negative nums positive, and make it len(nums) + 1 so it does not influence our algorithm

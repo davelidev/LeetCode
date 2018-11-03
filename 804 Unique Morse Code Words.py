@@ -1,5 +1,4 @@
-class Answer(object):
-'''804. Unique Morse Code Words'''
+class Answer(object):'''804. Unique Morse Code Words'''
     def uniqueMorseRepresentations(words):
         mapping = [".-","-...","-.-.","-..",".","..-.","--.",
                    "....","..",".---","-.-",".-..","--","-.",

@@ -1,5 +1,4 @@
-class Answer(object):
-'''24. Swap Nodes in Pairs'''
+class Answer(object):'''24. Swap Nodes in Pairs'''
     def swapPairs(self, head):
         dummy_head = ListNode('dummy')
         dummy_head.next = head

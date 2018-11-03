@@ -1,5 +1,4 @@
-class Answer(object):
-'''56. Merge Intervals'''
+class Answer(object):'''56. Merge Intervals'''
     def merge(intervals):
         res = []
         intervals = [[interval.start, interval.end] for interval in intervals]

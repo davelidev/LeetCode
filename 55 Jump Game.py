@@ -1,5 +1,4 @@
-class Answer(object):
-'''55. Jump Game'''
+class Answer(object):'''55. Jump Game'''
     def canJump(nums):
         max_idx_jump = 0
         for i in range(len(nums)):

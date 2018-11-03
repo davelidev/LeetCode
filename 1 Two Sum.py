@@ -1,5 +1,4 @@
-class Answer(object):
-'''1. Two Sum'''
+class Answer(object):'''1. Two Sum'''
     def twoSum(nums, target):
         seen = {}
         for i, num in enumerate(nums):

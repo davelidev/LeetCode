@@ -1,5 +1,4 @@
-class Answer(object):
-'''14. Longest Common Prefix'''
+class Answer(object):'''14. Longest Common Prefix'''
     def longestCommonPrefix(strs):
         if not strs: return ''
         longest_prefix = None

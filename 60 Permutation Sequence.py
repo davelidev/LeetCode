@@ -1,5 +1,4 @@
-class Answer(object):
-'''60. Permutation Sequence'''
+class Answer(object):'''60. Permutation Sequence'''
     def nextPermutation(nums):
         if len(nums) <= 1: return
         # find first decreasing seq

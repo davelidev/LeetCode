@@ -1,5 +1,4 @@
-class Answer(object):
-'''21. Merge Two Sorted Lists'''
+class Answer(object):'''21. Merge Two Sorted Lists'''
     def mergeTwoLists(l1, l2):
         dummy = l = ListNode('dummy')
         while l1 or l2:

@@ -1,5 +1,4 @@
-class Answer(object):
-'''48. Rotate Image'''
+class Answer(object):'''48. Rotate Image'''
     def rotate(matrix):
         for i in range(len(matrix) / 2):
             for j in range(i, len(matrix) - i - 1):

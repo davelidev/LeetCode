@@ -1,5 +1,4 @@
-class Answer(object):
-'''33. Search in Rotated Sorted Array'''
+class Answer(object):'''33. Search in Rotated Sorted Array'''
     def search(nums, target):
         lo, hi = 0, len(nums) - 1
         while lo <= hi:

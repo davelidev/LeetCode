@@ -1,5 +1,4 @@
-class Answer(object):
-'''15. 3Sum'''
+class Answer(object):'''15. 3Sum'''
     def threeSum(nums):
         nums.sort()
         res = []

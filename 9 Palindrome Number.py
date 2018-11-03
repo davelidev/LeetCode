@@ -1,5 +1,4 @@
-class Answer(object):
-'''9. Palindrome Number'''
+class Answer(object):'''9. Palindrome Number'''
     def isPalindrome(x):
         if x < 0: return False
         y, rev = x, 0

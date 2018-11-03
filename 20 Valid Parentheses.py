@@ -1,5 +1,4 @@
-class Answer(object):
-'''20. Valid Parentheses'''
+class Answer(object):'''20. Valid Parentheses'''
     def isValid(s):
         stack = []
         closing_to_opening = {')':'(', '}':'{', ']':'['}

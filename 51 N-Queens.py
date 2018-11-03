@@ -1,5 +1,4 @@
-class Answer(object):
-'''51. N-Queens'''
+class Answer(object):'''51. N-Queens'''
     def solveNQueens(n):
         vertical, diag1, diag2 = [[False] * (2 * n) for _ in range(3)]
         cur = [['.'] * n for _ in range(n)]

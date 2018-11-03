@@ -1,5 +1,4 @@
-class Answer(object):
-'''844. Backspace String Compare'''
+class Answer(object):'''844. Backspace String Compare'''
     def backspaceCompare(S, T):
         def process_str(string):
             res = []

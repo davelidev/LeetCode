@@ -1,5 +1,4 @@
-class Answer(object):
-'''18. 4Sum'''
+class Answer(object):'''18. 4Sum'''
     def fourSum(nums, target):
         n = len(nums)
         res = set()

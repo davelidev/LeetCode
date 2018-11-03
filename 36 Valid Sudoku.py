@@ -1,5 +1,4 @@
-class Answer(object):
-'''36. Valid Sudoku'''
+class Answer(object):'''36. Valid Sudoku'''
     def isValidSudoku(board):
         def check_section_valid(section):
             from collections import Counter

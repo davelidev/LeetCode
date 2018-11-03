@@ -1,5 +1,4 @@
-class Answer(object):
-'''26. Remove Duplicates from Sorted Array'''
+class Answer(object):'''26. Remove Duplicates from Sorted Array'''
     def removeDuplicates(nums):
         i = 0
         nums.append('dummy')

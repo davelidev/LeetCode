@@ -1,5 +1,4 @@
-class Answer(object):
-'''68. Text Justification'''
+class Answer(object):'''68. Text Justification'''
     def fullJustify(words, maxWidth):
         '''Use a queue. For each line, add words to the queue, including spaces as delimitor,
          while keeping count of number of chars. If the queue overflows,

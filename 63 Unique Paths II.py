@@ -1,5 +1,4 @@
-class Answer(object):
-'''63. Unique Paths II'''
+class Answer(object):'''63. Unique Paths II'''
     def uniquePathsWithObstacles(obstacleGrid):
         if not obstacleGrid or not obstacleGrid[0]: return 0
         dp = [[1 - item for item in row] for row in obstacleGrid]

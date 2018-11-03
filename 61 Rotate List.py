@@ -1,5 +1,4 @@
-class Answer(object):
-'''61. Rotate List'''
+class Answer(object):'''61. Rotate List'''
     def rotateRight(head, k):
         if not head:
             return

@@ -1,5 +1,4 @@
-class Answer(object):
-'''38. Count and Say'''
+class Answer(object):'''38. Count and Say'''
     def countAndSay(n):
         cur = ['1']
         for i in range(n - 1):

@@ -1,5 +1,4 @@
-class Answer(object):
-'''74. Search a 2D Matrix'''
+class Answer(object):'''74. Search a 2D Matrix'''
     def searchMatrix(matrix, target):
         def _searchMatrix(start, end):
             if end <= 0:

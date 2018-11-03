@@ -1,5 +1,4 @@
-class Answer(object):
-'''820. Short Encoding of Words'''
+class Answer(object):'''820. Short Encoding of Words'''
     def minimumLengthEncoding(words):
         words = sorted([word[::-1] for word in words], reverse=True)
         return sum(len(words[i]) + 1

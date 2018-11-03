@@ -1,5 +1,4 @@
-class Answer(object):
-'''46. Permutations'''
+class Answer(object):'''46. Permutations'''
     def permute(self, nums):
         res = [[]]
         for num in nums:

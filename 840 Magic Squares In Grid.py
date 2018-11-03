@@ -1,5 +1,4 @@
-class Answer(object):
-'''840. Magic Squares In Grid'''
+class Answer(object):'''840. Magic Squares In Grid'''
     def numMagicSquaresInside(grid):
         def is_magic(i, j):
             qwe, asd, zxc = [grid[i + k][j:j + 3] for k in range(3)]

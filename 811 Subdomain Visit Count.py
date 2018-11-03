@@ -1,5 +1,4 @@
-class Answer(object):
-'''811. Subdomain Visit Count'''
+class Answer(object):'''811. Subdomain Visit Count'''
     def subdomainVisits(cpdomains):
         from collections import defaultdict
         subdomain_counts = defaultdict(int)

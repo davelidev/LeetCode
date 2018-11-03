@@ -1,5 +1,4 @@
-class Answer(object):
-'''59. Spiral Matrix II'''
+class Answer(object):'''59. Spiral Matrix II'''
     def generateMatrix(n):
         res = [[None] * n for _ in range(n)]
         cur_dir = x = 0

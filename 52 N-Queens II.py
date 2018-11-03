@@ -1,5 +1,4 @@
-class Answer(object):
-'''52. N-Queens II'''
+class Answer(object):'''52. N-Queens II'''
     def totalNQueens(n):
         vertical, diag1, diag2 = [[False] * (2 * n) for _ in range(3)]
         self.count = 0

@@ -1,5 +1,4 @@
-class Answer(object):
-'''66. Plus One'''
+class Answer(object):'''66. Plus One'''
     def plusOne(digits):
         for i in range(len(digits) - 1, -1, -1):
             if digits[i] < 9:

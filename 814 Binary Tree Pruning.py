@@ -1,5 +1,4 @@
-class Answer(object):
-'''814. Binary Tree Pruning'''
+class Answer(object):'''814. Binary Tree Pruning'''
     def pruneTree(root):
         def _pruneTree(node):
             if not node: return True

@@ -1,5 +1,4 @@
-class Answer(object):
-'''841. Keys and Rooms'''
+class Answer(object):'''841. Keys and Rooms'''
     def canVisitAllRooms(rooms):
         if not rooms: return True
         visited, bfs = {0}, {0}

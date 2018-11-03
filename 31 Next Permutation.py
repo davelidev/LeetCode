@@ -1,5 +1,4 @@
-class Answer(object):
-'''31. Next Permutation'''
+class Answer(object):'''31. Next Permutation'''
     def nextPermutation(self, nums):
         if len(nums) <= 1: return
         l, r = 0, len(nums) - 1

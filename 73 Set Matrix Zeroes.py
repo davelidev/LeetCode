@@ -1,5 +1,4 @@
-class Answer(object):
-'''73. Set Matrix Zeroes'''
+class Answer(object):'''73. Set Matrix Zeroes'''
     def setZeroes(matrix):
         m, n = len(matrix), len(matrix[0])
         row_1_zero = not all(matrix[0])

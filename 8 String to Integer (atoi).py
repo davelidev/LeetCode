@@ -1,5 +1,4 @@
-class Answer(object):
-'''8. String to Integer (atoi)'''
+class Answer(object):'''8. String to Integer (atoi)'''
     def myAtoi(s):
         s = s.lstrip(' ')
         sign = 1

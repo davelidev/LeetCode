@@ -1,5 +1,4 @@
-class Answer(object):
-'''2. Add Two Numbers'''
+class Answer(object):'''2. Add Two Numbers'''
     def addTwoNumbers(l1, l2):
         l1_cur, l2_cur = l1, l2
         cur = res = ListNode('dummy')

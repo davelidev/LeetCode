@@ -1,5 +1,4 @@
-class Answer(object):
-'''67. Add Binary'''
+class Answer(object):'''67. Add Binary'''
     def addBinary(a, b):
         a, b, carry = [int(i) for i in list(a)], [int(i) for i in list(b)], 0
         res = []

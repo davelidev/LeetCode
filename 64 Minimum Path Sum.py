@@ -1,5 +1,4 @@
-class Answer(object):
-'''64. Minimum Path Sum'''
+class Answer(object):'''64. Minimum Path Sum'''
     def minPathSum(grid):
         for i in range(1, len(grid)): grid[i][0] += grid[i - 1][0]
         for j in range(1, len(grid[0])): grid[0][j] += grid[0][j - 1]

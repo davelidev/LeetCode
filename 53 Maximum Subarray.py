@@ -1,5 +1,4 @@
-class Answer(object):
-'''53. Maximum Subarray'''
+class Answer(object):'''53. Maximum Subarray'''
     def maxSubArray(nums):
         max_sum = float('-inf')
         max_ending_here = float('-inf')

@@ -1,5 +1,4 @@
-class Answer(object):
-'''849. Maximize Distance to Closest Person'''
+class Answer(object):'''849. Maximize Distance to Closest Person'''
     def maxDistToClosest(seats):
         max_dist = prev = 0
         for i in range(1, len(seats)):

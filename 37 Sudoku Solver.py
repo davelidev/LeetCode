@@ -1,5 +1,4 @@
-class Answer(object):
-'''37. Sudoku Solver'''
+class Answer(object):'''37. Sudoku Solver'''
     def solveSudoku(self, board):
 
         seen = set()

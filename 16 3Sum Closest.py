@@ -1,5 +1,4 @@
-class Answer(object):
-'''16. 3Sum Closest'''
+class Answer(object):'''16. 3Sum Closest'''
     def threeSumClosest(nums, target):
         min_diff = float('inf')
         min_num = None

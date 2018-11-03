@@ -1,5 +1,4 @@
-class Answer(object):
-'''34. Search for a Range'''
+class Answer(object):'''34. Search for a Range'''
     def searchRange(nums, target):
         from bisect import bisect_left, bisect_right
         left_idx, right_idx = bisect_left(nums, target), bisect_right(nums, target) - 1

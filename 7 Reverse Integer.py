@@ -1,5 +1,4 @@
-class Answer(object):
-'''7. Reverse Integer'''
+class Answer(object):'''7. Reverse Integer'''
      def reverse(x):
         sign = 1 if x >= 0 else -1
         x = abs(x)
