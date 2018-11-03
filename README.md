@@ -1,13 +1,7 @@
-```python
-
-'''65. Valid Number'''
-
-'''493. Reverse Pairs'''
-    
 
 '''149. Max Points on a Line'''
     def maxPoints(self, points):
-    ''' O(V**2) time and O(V) space
+        ''' O(V**2) time and O(V) space
         for each node, calculate the slope with adjacent nodes and keep track of the max
         edge cases => same coordinates, infinite slope, convert to float'''
         import numpy as np
@@ -27,16 +21,9 @@
             max_count = max(max(slope_cnt.values() or [1]) + same, max_count)
         return max_count or int(bool(points))
 
-
-'''44. Wildcard Matching'''
-
-'''146. LRU Cache'''
-
-'''273. Integer to English Words'''
-
 '''126. Word Ladder II'''
     def findLadders(beginWord, endWord, wordList):
-    '''O(wl + V + E) time, O(wl * V + E) space, where wl is the max word length
+        '''O(wl + V + E) time, O(wl * V + E) space, where wl is the max word length
         # Use bfs to find the closest path, words with one letter difference form a path
         initialize and construct the edges like the following:
             for words abc, abd => {'_bc':['abc'], 'a_c':['abc'],'ab_':['abc', 'abd'],'_bd':['abd'],'a_d':['abd']}
@@ -64,14 +51,6 @@
             if final_path: return final_path
         return []
 
-'''32. Longest Valid Parentheses'''
-
-'''639. Decode Ways II'''
-
-'''564. Find the Closest Palindrome'''
-
-'''420. Strong Password Checker'''
-
 '''132. Palindrome Partitioning II'''
     def minCut(s):
         n = len(s)
@@ -88,14 +67,6 @@
             for i in range(j):
                 if is_pal[i][j]: dp[j] = min(dp[j], dp[i] + 1)
         return dp[-1]
-
-'''10. Regular Expression Matching'''
-
-'''321. Create Maximum Number'''
-
-'''4. Median of Two Sorted Arrays'''
-
-'''30. Substring with Concatenation of All Words'''
 
 '''212. Word Search II'''
     
@@ -129,7 +100,6 @@
             for j in range(n):
                 dfs(i, j, tree)
         return list(seen)
-
 
 '''68. Text Justification'''
     def fullJustify(words, maxWidth):
@@ -171,18 +141,6 @@
                 start += 1
         return s[i: j] if j != float('inf') else ''
 
-'''188. Best Time to Buy and Sell Stock IV'''
-
-'''214. Shortest Palindrome'''
-
-'''730. Count Different Palindromic Subsequences'''
-
-'''174. Dungeon Game'''
-
-'''446. Arithmetic Slices II - Subsequence'''
-
-'''164. Maximum Gap'''
-
 '''45. Jump Game II'''
     def jump(nums):
         if len(nums) == 1:
@@ -200,10 +158,6 @@
             for i in range(to_visit[0], to_visit[1]):
                 new_max = max(new_max, nums[i] + i + 1)
             to_visit = (to_visit[1], new_max)
-
-'''72. Edit Distance'''
-
-'''354. Russian Doll Envelopes'''
 
 '''630. Course Schedule III'''
     def scheduleCourse(courses):
@@ -233,10 +187,6 @@
             dp.append((left, height))
         return max_area
 
-'''587. Erect the Fence'''
-
-'''440. K-th Smallest in Lexicographical Order'''
-
 '''41. First Missing Positive'''
     def firstMissingPositive(nums):
         # index visited is marked as negative
@@ -249,14 +199,6 @@
         for i, num in enumerate(nums):
             if 0 < abs(num) < len(nums): nums[abs(num)] = -abs(nums[abs(num)])
         return next((i for i, num in enumerate(nums) if i and num > 0), len(nums))
-
-'''552. Student Attendance Record II'''
-
-'''123. Best Time to Buy and Sell Stock III'''
-
-'''97. Interleaving String'''
-
-'''502. IPO'''
 
 '''51. N-Queens'''
     def solveNQueens(n):
@@ -297,14 +239,6 @@
             return False
         return _isScramble(s1, s2)
 
-'''460. LFU Cache'''
-
-'''233. Number of Digit One'''
-
-'''629. K Inverse Pairs Array'''
-
-'''115. Distinct Subsequences'''
-
 '''224. Basic Calculator'''
     def calculate(s):
         s = list(('((%s)'%s).replace(' ', ''))
@@ -341,19 +275,6 @@
             cur, lst = cur.next, lst.next
             if lst: heapq.heappush(heap, (lst.val, lst))
         return dummy_head.next
-
-
-
-
-'''591. Tag Validator'''
-
-'''336. Palindrome Pairs'''
-
-'''282. Expression Add Operators'''
-
-'''316. Remove Duplicate Letters'''
-
-'''719. Find K-th Smallest Pair Distance'''
 
 '''391. Perfect Rectangle'''
     # hash all the corners, check count to ensure all corners have 2/4 count, and the outer corners have exactly 1 count
@@ -418,8 +339,6 @@
             else: s, e = min(interval.start, s), max(interval.end, e)
         return left + [Interval(s, e)] + right
 
-'''600. Non-negative Integers without Consecutive Ones'''
-
 '''675. Cut Off Trees for Golf Event'''
     # First iterate through the forest and store the values along with their associated positions. Sort the values and iterate through the list to cut off the trees one by one while accumulating the steps taken. Searching can be done using bfs with a visited algorithm.
     def cutOffTree(forest):
@@ -477,18 +396,6 @@
         
         return max(_maxPathSum(root))
 
-'''664. Strange Printer'''
-
-'''297. Serialize and Deserialize Binary Tree'''
-
-'''330. Patching Array'''
-
-'''239. Sliding Window Maximum'''
-
-'''691. Stickers to Spell Word'''
-
-'''363. Max Sum of Rectangle No Larger Than K'''
-
 '''403. Frog Jump'''
     def canCross(stones):
         from collections import defaultdict
@@ -504,15 +411,8 @@
         return False 
                         
 
-
-'''483. Smallest Good Base'''
-
-'''546. Remove Boxes'''
-
 '''42. Trapping Rain Water'''
     #Have 2 pointers, one from the left, one from the right. Keep track of the max from the left as well as the max from the right. The water level in the current block is calculated by min(left_max, right_max) - cur_ground. move i from the left to right if max_left < max_right, move j fromt he right to left  otherwise.
-
-'''154. Find Minimum in Rotated Sorted Array II'''
 
 '''301. Remove Invalid Parentheses'''
     def check_valid(lst):
@@ -542,12 +442,6 @@
         bfs = bfs_secondary
         bfs_secondary = []
 
-'''668. Kth Smallest Number in Multiplication Table'''
-
-'''517. Super Washing Machines'''
-
-'''699. Falling Squares'''
-
 '''145. Binary Tree Postorder Traversal'''
     def postorderTraversal(root):
         if not root: return []
@@ -556,10 +450,6 @@
             bfs = [kid for node in bfs
                    for kid in ([node.left, node.right, node.val] if type(node) == TreeNode else [node]) if kid is not None]
         return bfs
-
-'''736. Parse Lisp Expression'''
-
-'''410. Split Array Largest Sum'''
 
 '''128. Longest Consecutive Sequence'''
     def longestConsecutive(nums):
@@ -582,12 +472,6 @@
                 max_size = max(max_size, size)
         return max_size
 
-'''726. Number of Atoms'''
-
-'''514. Freedom Trail'''
-
-'''488. Zuma Game'''
-
 '''632. Smallest Range'''
     def smallest_range(lst_of_lsts):
         min_heap = MinHeap()
@@ -607,7 +491,6 @@
                 return shotest_dist
             min_heap.push([lst[coord[0]][coord[1] + 1], [coord[0], coord[1] + 1]])
 
-
 '''329. Longest Increasing Path in a Matrix'''
     def longestIncreasingPath(matrix):
         xy_dir = zip([-1, 0, 1, 0], [0, -1, 0, 1])
@@ -620,8 +503,6 @@
             dp[x][y] = max([(get_max_inc(i, j) + 1) for i, j in adj] or [1])
             return dp[x][y]
         return max([get_max_inc(x, y) for x in range(m) for y in range(n)] or [0])
-
-'''679. 24 Game'''
 
 '''352. Data Stream as Disjoint Intervals'''
     # This is a variation of "128. Longest Consecutive Sequence". In addition, keep a list of start times to reconstruct at later time.
@@ -654,16 +535,6 @@
             for start_time in sorted(self.start_times):
                 res.append([start_time, start_time + self.start_time_to_num_of_elems[start_time] - 1])
             return res if res else None
-
-'''732. My Calendar III'''
-
-'''315. Count of Smaller Numbers After Self'''
-
-'''312. Burst Balloons'''
-
-'''407. Trapping Rain Water II'''
-
-'''689. Maximum Sum of 3 Non-Overlapping Subarrays'''
 
 '''52. N-Queens II'''
     def totalNQueens(n):
@@ -715,14 +586,8 @@
                 return None
             return self.idx_vals_pair[self.idx_mapper[randint(0, len(self.idx_mapper) - 1)]][1]
 
-
-
-'''715. Range Module'''
-
 '''432. All O`one Data Structure'''
     # create a min heap and max heap. For inc, if the key exists, search, increment and modify its position accordingly in both heaps, otherwise insert it to both heaps. For dec, if the key exists, search, decrement and modify its position accordingly in both heaps. getMaxKey, and getMinKey is simply a call to the heap function to get the maximum and minimum.
-
-'''91. Decode Ways'''
 
 '''468. Validate IP Address'''
     def validIPAddress(IP):
@@ -755,7 +620,6 @@
         return "Neither"
             
             
-
 
 '''3. Longest Substring Without Repeating Characters'''
     keep a set of visited chars, iterate through the string. Keep count of number of visited chars, update it in each iteration. If the char is already visited, remove from the set and reset the count.
@@ -808,8 +672,6 @@
         head, cur.next, tail.next = cur.next, None, head
         return head
 
-'''220. Contains Duplicate III'''
-
 '''179. Largest Number'''
     def largestNumber(nums):
         comp_func = lambda x, y : 1 if str(x) + str(y) > str(y) + str(x) else -1
@@ -859,12 +721,6 @@
         def sumRegion(self, row1, col1, row2, col2):
             return self._sub_points([[row2, col2], [row1 - 1, col1 - 1]],[[row1 - 1, col2], [row2, col1 - 1]])
 
-'''143. Reorder List'''
-
-'''722. Remove Comments'''
-
-'''6. ZigZag Conversion'''
-
 '''71. Simplify Path'''
     simplified_path = []
     for folder in path.split('/'):
@@ -873,8 +729,6 @@
         else:
             simplified_path.append(folder)
     simplified_path = '/'.join(simplified_path)
-
-'''166. Fraction to Recurring Decimal'''
 
 '''322. Coin Change'''
     dp = [float('inf')] * (amount + 1)
@@ -895,8 +749,6 @@
             small, large = min(vals), max(vals)
             max_val = max(large, max_val)
         return max_val
-
-'''50. Pow(x, n)'''
 
 '''324. Wiggle Sort II'''
     # Iterate through each number from left to right of a b c d e f. If a > b, then it's out of order, since b is in even position, and b is less than the previous number a, then swap a and b inplace, otherwise continue. Do the same for even position elements.
@@ -922,8 +774,6 @@
                         res.add(tuple(sorted(pair_1 + pair_2)))
         return list(res)
 
-'''464. Can I Win'''
-
 '''133. Clone Graph'''
     def cloneGraph(node):
         start_node = node
@@ -945,8 +795,6 @@
                     stack.insert(0, neighbor)
                 copied.add(node)
         return node_to_clone[start_node]
-
-'''29. Divide Two Integers'''
 
 '''130. Surrounded Regions'''
     # Go through all the edge regions, if the region is a part of an island, then mark and convert the island to '~'. Go though all the regions, and convert 'O' and 'X' as well as convert '~' to 'O'.
@@ -1088,8 +936,6 @@
             i += 1
         return res
 
-'''43. Multiply Strings'''
-
 '''306. Additive Number'''
     #Use a for loop with i, j, k where i < j < k to loop though string. Find all the possible combinations with prefix that begin with an additive sequence. For each possible combination, check whether or not the whole string is a additive sequence.
 
@@ -1120,8 +966,6 @@
             else:
                 stack.append(int(char))
         return stack[0]
-
-'''365. Water and Jug Problem'''
 
 '''79. Word Search'''
     A variation of "212. Word Search II"
@@ -1187,8 +1031,6 @@
         else:
             return -1
 
-'''372. Super Pow'''
-
 '''221. Maximal Square'''
     def maximalSquare(matrix):
         from itertools import chain
@@ -1203,7 +1045,6 @@
                 matrix[i][j] = (min_wh if matrix[i][j] else 0) + is_inc
                 max_w = max(max_w, matrix[i][j])
         return max_w ** 2
-
 
 '''109. Convert Sorted List to Binary Search Tree'''
     def sortedListToBST(head):
@@ -1270,7 +1111,6 @@
             bfs, bfs2 = bfs2, []
         return not any(flow)
 
-
 '''450. Delete Node in a BST'''
         def _findMinNode(node):
             node = node.right
@@ -1299,8 +1139,6 @@
                     root.right = _deleteNode(root.right, min_node.val)
             return root
 
-'''467. Unique Substrings in Wraparound String'''
-
 '''113. Path Sum II'''
     def pathSum(root, total):
         cur_path = []
@@ -1317,8 +1155,6 @@
             cur_path.pop()
         _pathSum(root, 0)
         return res
-
-'''264. Ugly Number II'''
 
 '''80. Remove Duplicates from Sorted Array II'''
     def removeDuplicates(nums):
@@ -1446,9 +1282,6 @@
             group[key].append(word)
         return group.values()
 
-
-'''275. H-Index II'''
-
 '''388. Longest Absolute File Path'''
     def lengthLongestPath(input_file_sys):
         input_file_sys = input_file_sys.replace('    ', '\t')
@@ -1531,8 +1364,6 @@
             sum_count.setdefault(sum_from_left, 0)
             sum_count[sum_from_left] += 1
         return res
-
-'''650. 2 Keys Keyboard'''
 
 '''55. Jump Game'''
     def canJump(nums):
@@ -1639,9 +1470,6 @@
                 return node, node
         _flatten(root)
 
-
-'''649. Dota2 Senate'''
-
 '''378. Kth Smallest Element in a Sorted Matrix'''
     def kthSmallest(matrix, k):
         return sorted(i for row in matrix for i in row)[k-1]
@@ -1668,8 +1496,6 @@
             else:
                 return len(s)
         return _longestSubstring(s, k)
-
-'''421. Maximum XOR of Two Numbers in an Array'''
 
 '''382. Linked List Random Node'''
     import random
@@ -1712,8 +1538,6 @@
                     first = i
                 prev = i
         return min(min_in_a_day - (prev - first), min_diff)
-
-'''357. Count Numbers with Unique Digits'''
 
 '''241. Different Ways to Add Parentheses'''
     import re
@@ -1777,8 +1601,6 @@
             if sum_from_right >= i:
                 return i
 
-'''592. Fraction Addition and Subtraction'''
-
 '''678. Valid Parenthesis String'''
     def checkValidString(s):
         high = low = 0
@@ -1827,8 +1649,6 @@
             res.append(replaced_word)
         return ' '.join(res)
 
-'''375. Guess Number Higher or Lower II'''
-
 '''445. Add Two Numbers II'''
     def addTwoNumbers(self, l1, l2):
         
@@ -1867,7 +1687,6 @@
                 high = mid
             elif nums[mid] > nums[0]:
                 low = mid
-
 
 '''47. Permutations II'''
     def permuteUnique(nums):
@@ -1997,7 +1816,6 @@
                     return res
         return res
 
-
 '''368. Largest Divisible Subset'''
     # sort, dp[i] := (size, largest elem) <= max the size by iterating from the beginning if the dp array. given a b c d, if c is divisible by a, and d is divisible by c, then [a c d] will form a subarray since d will be divisible also by a.
 
@@ -2051,8 +1869,6 @@
         start_idx = sorted([i.start, idx] for idx, i in enumerate(intervals)) + [[float('inf'), -1]]
         return [start_idx[bisect_left(start_idx, [i.end])][1] for i in intervals]
 
-'''309. Best Time to Buy and Sell Stock with Cooldown'''
-
 '''640. Solve the Equation'''
     def solveEquation(equation):
         import re
@@ -2067,8 +1883,6 @@
         if not num_x and not val: return "Infinite solutions"
         elif not num_x: return 'No solution'
         return 'x=%d' % (val / num_x)
-
-'''553. Optimal Division'''
 
 '''201. Bitwise AND of Numbers Range'''
     def rangeBitwiseAnd(m, n):
@@ -2142,7 +1956,6 @@
                 cur = cur.left
             return ret.val
 
-
 '''338. Counting Bits'''
     def countBits(self, num):
         res = [0]
@@ -2195,12 +2008,6 @@
             res = new_res
         return res
 
-'''537. Complex Number Multiplication'''
-
-'''638. Shopping Offers'''
-
-'''12. Integer to Roman'''
-
 '''725. Split Linked List in Parts'''
     def splitListToParts(root, k):
         cur = root
@@ -2232,8 +2039,6 @@
             dp[n] = max(chain((get_max(i) * get_max(n-i) for i in range(1, n)), (n, )))
             return dp[n]
         return get_max(n)
-
-'''287. Find the Duplicate Number'''
 
 '''22. Generate Parentheses'''
     def generateParenthesis(n):
@@ -2272,9 +2077,6 @@
             node.right, new_node.right = new_node, node.right
         return root
 
-
-'''393. UTF-8 Validation'''
-
 '''78. Subsets'''
     def subsets(nums):
         res = [[]]
@@ -2311,8 +2113,6 @@
         for i in range(m):
             for j in range(n):
                 matrix[i][j] = matrix[i][j] or 0
-
-'''397. Integer Replacement'''
 
 '''524. Longest Word in Dictionary through Deleting'''
     def findLongestWord(s, d):
@@ -2530,8 +2330,6 @@
         stack.append(''.join(str_queue))
         return ''.join(stack)
 
-'''636. Exclusive Time of Functions'''
-
 '''376. Wiggle Subsequence'''
     def wiggleMaxLength(nums):
         # update up_tog when the first up/down, or down/up is seen.
@@ -2550,7 +2348,6 @@
                 count, up_tog = count + 1, not up_tog
         return count
 
-
 '''236. Lowest Common Ancestor of a Binary Tree'''
     def lowestCommonAncestor(self, root, p, q):
         def _searchAncestor(node):
@@ -2559,8 +2356,6 @@
                 l, r = _searchAncestor(node.left), _searchAncestor(node.right)
                 return node if (l and r) else (l or r)
         return _searchAncestor(root)
-
-'''516. Longest Palindromic Subsequence'''
 
 '''199. Binary Tree Right Side View'''
     def rightSideView(root):
@@ -2627,8 +2422,6 @@
         _subsetsWithDup()
         return res
 
-'''714. Best Time to Buy and Sell Stock with Transaction Fee'''
-
 '''230. Kth Smallest Element in a BST'''
     def kthSmallest(root, k):
         stack = []
@@ -2673,8 +2466,6 @@
         if prev and prev.next: prev.next = prev.next.next
         return head
 
-'''417. Pacific Atlantic Water Flow'''
-
 '''729. My Calendar I'''
     class MyCalendar(object):
 
@@ -2713,8 +2504,6 @@
                 else:
                     l += 1
         return res
-
-'''526. Beautiful Arrangement'''
 
 '''462. Minimum Moves to Equal Array Elements II'''
     def minMoves2(nums):
@@ -2829,8 +2618,6 @@
             elif 0 < i: i -= 1
             else: j += 1
         return arr[i:j]
-
-'''731. My Calendar II'''
 
 '''139. Word Break'''
     def wordBreak(self, s, wordDict):
@@ -3004,8 +2791,6 @@
             elif get_val(mid - 1) > get_val(mid): hi = mid - 1
             else: lo = mid + 1
 
-'''396. Rotate Function'''
-
 '''223. Rectangle Area'''
     def computeArea(A, B, C, D, E, F, G, H):
         width, height = (min(C, G) - max(A, E)), (min(D, H) - max(B, F))
@@ -3078,9 +2863,6 @@
             route.append(airport)
             return route
         return dfs('JFK')[::-1]
-
-
-'''522. Longest Uncommon Subsequence II'''
 
 '''210. Course Schedule II'''
     def findOrder(numCourses, prerequisites):
@@ -3222,8 +3004,6 @@
             return dummy.next
         return _merge_sort(head)
 
-'''386. Lexicographical Numbers'''
-
 '''147. Insertion Sort List'''
     def insertionSortList(head):
         dummy = ListNode(-1000000)
@@ -3240,7 +3020,6 @@
             node.next = tmp
             if boundary_prev.next != boundary: boundary_prev = boundary_prev.next
         return dummy.next
-
 
 '''456. 132 Pattern'''
     def find132pattern(nums):
@@ -3318,8 +3097,6 @@
         for i in range(len(counts)): counts[i] = counts[i][1] * counts[i][0]
         return ''.join(counts)
 
-'''621. Task Scheduler'''
-
 '''228. Summary Ranges'''
     def summaryRanges(nums):
         ranges = []
@@ -3371,12 +3148,6 @@
         even_odd[0].next = even_odd_head[1].next
         return even_odd_head[0].next
 
-'''313. Super Ugly Number'''
-
-'''474. Ones and Zeroes'''
-
-'''712. Minimum ASCII Delete Sum for Two Strings'''
-
 '''2. Add Two Numbers'''
     def addTwoNumbers(l1, l2):
         l1_cur, l2_cur = l1, l2
@@ -3390,7 +3161,6 @@
             if l1: l1 = l1.next
             if l2: l2 = l2.next
         return res.next
-
 
 '''60. Permutation Sequence'''
     def nextPermutation(nums):
@@ -3485,7 +3255,6 @@
             res.append(connected_nodes)
         return res
 
-
 '''416. Partition Equal Subset Sum'''
     def canPartition(nums):
         all_sums = {0}
@@ -3549,8 +3318,6 @@
                     stack.append(b)
         return stack[::-1]
 
-'''390. Elimination Game'''
-
 '''673. Number of Longest Increasing Subsequence'''
     def lengthOfLIS(nums):
         end_idx = [None] * len(nums)
@@ -3582,8 +3349,6 @@
             if preorder[self.idx - 1] == '#': return True
             return _isValidSerialization() and _isValidSerialization()
         return _isValidSerialization() and self.idx == len(preorder)
-
-'''137. Single Number II'''
 
 '''209. Minimum Size Subarray Sum'''
     def minSubArrayLen(s, nums):
@@ -3660,7 +3425,6 @@
         res.extend(range(k + 2, n + 1))
         return res
 
-
 '''299. Bulls and Cows'''
     def getHint(secret, guess):
         a = 0
@@ -3673,8 +3437,6 @@
                 g_counts[g_c] = g_counts.get(g_c, 0) + 1
         b = sum(min(s_counts.get(g_c, 0), g_counts[g_c]) for g_c in g_counts)
         return "%dA%dB" %(a, b)
-
-'''481. Magical String'''
 
 '''341. Flatten Nested List Iterator'''
     class NestedIterator(object):
@@ -3704,8 +3466,6 @@
                 self.stack.pop()
                 return self.hasNext()
 
-'''659. Split Array into Consecutive Subsequences'''
-
 '''413. Arithmetic Slices'''
     def numberOfArithmeticSlices(A):
         diffs = []
@@ -3717,7 +3477,6 @@
             else: diffs[-1] += 1
             prev = diff
         return sum((n * (n - 1) / 2) for n in diffs)
-
 
 '''216. Combination Sum III'''
     def combinationSum3(k, n):
@@ -3769,8 +3528,6 @@
                 res[stack.pop()] = nums[i]
             stack.append(i)
         return res
-
-'''672. Bulb Switcher II'''
 
 '''646. Maximum Length of Pair Chain'''
     def findLongestChain(pairs):
@@ -3899,8 +3656,6 @@
         def hasNext(self):            self.peek()
             return not bool(self.cache is None)
 
-'''737. Sentence Similarity II'''
-
 '''477. Total Hamming Distance'''
     def totalHammingDistance(nums):
         nums = [[int(bool(num & (1 << i))) for i in range(31, -1, -1)] for num in nums]
@@ -4024,8 +3779,6 @@
                 else: stack = [cur[char] for cur in stack if char in cur]
             return any(cur[True] for cur in stack if True in cur)
 
-'''355. Design Twitter'''
-
 '''208. Implement Trie (Prefix Tree)'''
     class Trie(object):
 
@@ -4117,8 +3870,6 @@
             else:
                 low = mid + 1
 
-'''479. Largest Palindrome Product'''
-
 '''7. Reverse Integer'''
      def reverse(x):
         sign = 1 if x >= 0 else -1
@@ -4161,8 +3912,6 @@
             while cur + 1 < len(heaters) and heaters[cur + 1] < house: cur += 1
             diff = max(diff, min(abs(heaters[cur] - house), abs(heaters[cur + 1] - house)))
         return diff
-
-'''400. Nth Digit'''
 
 '''160. Intersection of Two Linked Lists'''
     def getIntersectionNode(headA, headB):
@@ -4812,15 +4561,11 @@
             else: j += 1
         return j, i
 
-'''405. Convert a Number to Hexadecimal'''
-
 '''520. Detect Capital'''
     def detectCapitalUse(word):
         is_chars_upper = [(char == char.upper()) for char in reversed(word)]
         first_char_upper = is_chars_upper.pop()
         return first_char_upper and all(is_chars_upper) or not any(is_chars_upper)
-
-'''371. Sum of Two Integers'''
 
 '''171. Excel Sheet Column Number'''
     def convertToTitle(n):
@@ -4849,8 +4594,6 @@
                 n += (x % 10) ** 2
                 x /= 10
         return True
-
-'''69. Sqrt(x)'''
 
 '''28. Implement strStr()'''
     def strStr(haystack, needle):
@@ -4982,8 +4725,6 @@
                 num_to_start_end[num] = (min(i, start), max(i, end))
         return min([end - start + 1 for start, end in num_to_start_end.values()])
 
-'''441. Arranging Coins'''
-
 '''461. Hamming Distance'''
     def hammingDistance(x, y):
         count = 0
@@ -5016,8 +4757,6 @@
             if counts[char] == 1:
                 return i
         return -1
-
-'''13. Roman to Integer'''
 
 '''66. Plus One'''
     def plusOne(digits):
@@ -5262,7 +5001,6 @@
             elif pair_sum < target: i += 1
             else: j -= 1
 
-
 '''628. Maximum Product of Three Numbers'''
     def maximumProduct(nums):
         max1 = max2 = max3 = float('-inf')
@@ -5284,7 +5022,6 @@
             if (not min2.append(num)) and len(min2) == 3: min2.remove(max(min2))
         def prod(lst): return reduce(lambda x, y: x * y, lst, 1)
         return max(prod(max3), prod(min2 + [max(max3)]))
-
 
 '''599. Minimum Index Sum of Two Lists'''
     def findRestaurant(list1, list2):
@@ -5391,8 +5128,6 @@
                 res += 1
         return res
 
-'''734. Sentence Similarity'''
-
 '''543. Diameter of Binary Tree'''
     def diameterOfBinaryTree(root):
         self.max = 0
@@ -5429,8 +5164,6 @@
         for i in range(len(s)):
             if not(s_to_t[ord(s[i])] == ord(t[i]) and s_to_t[ord(t[i]) << 10] == ord(s[i])): return False
         return True
-
-'''263. Ugly Number'''
 
 '''258. Add Digits'''
     def addDigits(num):
@@ -5536,7 +5269,6 @@
         for j in range(i, len(nums)):
             nums[j] = 0
 
-
 '''414. Third Maximum Number'''
     def thirdMax(nums):
         if not nums: return
@@ -5606,7 +5338,6 @@
                 counts1[num] -= 1
         return res
 
-
 '''696. Count Binary Substrings'''
     def countBinarySubstrings(s):
         s = map(len, s.replace('01', '0 1').replace('10', '1 0').split())
@@ -5641,7 +5372,6 @@
         def peek(self): return self._move_to_outgoing()[-1]
 
         def empty(self): return not (self.incoming or self.outgoing)
-
 
 '''225. Implement Stack using Queues'''
     class MyStack(object):
@@ -5698,7 +5428,6 @@
                 cur_path.pop()
         dfs(0)
         return paths
-
 
 '''788. Rotated Digits'''
     def rotatedDigits(N):
@@ -6282,4 +6011,207 @@
         return any(is_seq(0, i, j)
                    for j in range(2, len(num))
                    for i in range(1, j))
-```
+
+'''888. Fair Candy Swap'''
+    def fairCandySwap(A, B):
+        n, m = sum(A), sum(B)
+        gap = (m - n) / 2
+        B_set = set(B)
+        for i in A:
+            if (i + gap) in B_set:
+                return (i, (i + gap))
+
+'''908. Smallest Range I'''
+    def smallestRangeI(A, K):
+        return max(max(A) - min(A) - 2 * K, 0)
+
+'''911. Online Election'''
+import bisect
+class TopVotedCandidate(object):
+
+    def __init__(self, persons, times):        
+        person_to_count = {}
+        max_vote = 0
+        winning = self.winning = []
+        self.times = times
+        for i in range(len(persons)):
+            person_to_count[persons[i]] = person_to_count.get(persons[i], 0) + 1
+            if person_to_count[persons[i]] >= max_vote:
+                max_vote = person_to_count[persons[i]]
+                winning.append(persons[i])
+            else:
+                winning.append(winning[-1])            
+
+    def q(self, t):
+        idx = bisect.bisect_left(self.times, t)
+        if idx >= len(self.times) or self.times[idx] > t: idx -= 1
+        return self.winning[idx]
+
+'''896. Monotonic Array'''
+    def isMonotonic(A):
+        if len(A) <= 2: return True
+        return all(A[i] <= A[i + 1] for i in range(len(A) - 1)) or \
+               all(A[i] >= A[i + 1] for i in range(len(A) - 1))
+
+'''897. Increasing Order Search Tree'''
+class Solution(object):
+    def increasingBST(self, root):
+        self.cur = dummy = TreeNode('dummy')
+        def create_tree(node):
+            if not node: return
+            if node.left:
+                create_tree(node.left)
+            self.cur.right = TreeNode(node.val)
+            self.cur = self.cur.right
+            if node.right:
+                create_tree(node.right)
+        create_tree(root)
+        return dummy.right
+
+'''884. Uncommon Words from Two Sentences'''
+    def uncommonFromSentences(A, B):
+        from collections import Counter
+        A = A.split(' ')
+        B = B.split(' ')
+        A = Counter(A)
+        B = Counter(B)
+        return [a for a, count in A.iteritems() if count == 1 and a not in B] + \
+            [b for b, count in B.iteritems() if count == 1 and b not in A]
+
+'''892. Surface Area of 3D Shapes'''
+    def surfaceArea(grid):
+        n = len(grid)
+        def surface(n): return n * 6 - (n - 1) * 2 if n else 0
+        total = sum(surface(grid[i][j]) for i in range(n) for j in range(n))
+        adj_ver = sum(min(grid[i][j], grid[i][j + 1]) * 2 for i in range(n) for j in range(n - 1))
+        adj_hor = sum(min(grid[i][j], grid[i + 1][j ]) * 2 for i in range(n - 1) for j in range(n))
+        return total - adj_ver - adj_hor
+
+'''894. All Possible Full Binary Trees'''
+    def allPossibleFBT(self, N):
+        def construct(n):
+            if n == 1: return [TreeNode(0)]
+            trees = []
+            for k in range(1, n, 2):
+                left, right = construct(k), construct(n - k - 1)
+                for l in left:
+                    for r in right:
+                        node = TreeNode(0)
+                        node.left, node.right = l, r
+                        trees.append(node)
+            return trees
+        return construct(N)
+
+'''914. X of a Kind in a Deck of Cards'''
+    def hasGroupsSizeX( deck):
+        from collections import Counter
+        counts = Counter(deck)
+        counts = set(counts.values())
+        min_c = min(counts)
+        return any( all((c % i == 0) for c in counts) for i in range(2, min_c + 1)) and min_c > 1
+
+'''915. Partition Array into Disjoint Intervals'''
+    def partitionDisjoint(self, A):
+        r_min = [A[-1]]
+        for i in range(len(A) -2, -1, -1):
+            r_min.append(min(A[i], r_min[-1]))
+        r_min.reverse()
+
+        max_so_far = A[0]
+        for i in range(len(A) - 1):
+            if max_so_far <=  r_min[i + 1]:
+                return i + 1
+            max_so_far = max(max_so_far, A[i])
+        return len(r_min)
+
+'''916. Word Subsets'''
+    def wordSubsets(A, B):
+        from collections import Counter        
+        max_c = {}
+        for w2 in B:
+            for char, count in Counter(w2).iteritems():
+                max_c[char] = max(max_c.get(char, 0), count)
+
+        res = []
+        for w1 in A:
+            c_word1 = Counter(w1)
+            if all(char in c_word1 and c_word1[char] >= max_c[char] for char in max_c):
+                res.append(w1)
+        return res
+
+'''925. Long Pressed Name'''
+    def isLongPressedName(name, typed):
+        def is_long_pressed(name, typed):
+            if not name and not typed:
+                return True
+            elif not name or not typed:
+                return False
+            elif name[0] != typed[0]:
+                return False
+            else:
+                n_dif, t_dif = len(name), len(typed)
+                new_name, new_typed = name.lstrip(name[0]), typed.lstrip(typed[0])
+                n_dif -= len(new_name)
+                t_dif -= len(new_typed)
+                return n_dif <= t_dif and is_long_pressed(new_name, new_typed)
+        return is_long_pressed(name, typed)
+
+'''926. Flip String to Monotone Increasing'''
+    def minFlipsMonoIncr(S):
+        if not S:
+            return 0
+        num_zeros_right = []
+        zeros_so_far = 0
+        count = 0
+        for bit in reversed(S):
+            count += 1
+            zeros_so_far += (bit == '0')
+            num_zeros_right.append(zeros_so_far)
+        num_zeros_right = num_zeros_right[::-1]
+        num_zeros_right.append(0)
+
+        optimal = S.count('0')
+        ones_so_far = 0
+        for i, bit in enumerate(S):
+            ones_so_far += (bit == '1')
+            zeros_to_right = num_zeros_right[i + 1]
+            optimal = min(optimal, ones_so_far + zeros_to_right)
+        return optimal
+
+'''929. Unique Email Addresses'''
+    def numUniqueEmails(emails):
+        res = set()
+        for email in emails:
+            email = email.split("@")
+            email[0] = email[0].replace(".", "")
+            email[0] = email[0][:email[0].find("+")]
+            res.add(tuple(email))
+        return len(res)
+
+'''930. Binary Subarrays With Sum'''
+    def numSubarraysWithSum(A, S):
+        sum_to_idx = [A[0]]
+        for i in range(1, len(A)):
+            sum_to_idx.append(sum_to_idx[-1] + A[i])
+        res = sum_so_far = 0
+        seen_count = {}
+        for num in A:
+            seen_count[sum_so_far] = seen_count.get(sum_so_far, 0) + 1
+            res += seen_count.get((sum_so_far + num) - S, 0)
+            sum_so_far += num
+        return res
+
+'''931. Minimum Falling Path Sum'''
+    def minFallingPathSum(A):
+        prev = A[0][:]
+        row = []
+        n = len(A)
+        for i in range(1, n):
+            row = []
+            for j in range(n):
+                cur = min((prev[j - 1] if (j - 1) >= 0 else float('inf')),
+                          (prev[j + 1]  if (j + 1) < n else float('inf')),
+                          prev[j])
+                row.append(cur + A[i][j])
+            prev = row
+        return min(row or prev)
